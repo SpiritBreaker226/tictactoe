@@ -20,6 +20,8 @@ Game.prototype.gameLoop = function(currentSelectedELement) {
 		alert(this.currentTurn + " Has Won");
 
 		$(".coloum").off("click");
+	} else if(this.turn === 10) {
+		alert("Game is a Draw");
 	} else {
 		currentSelectedELement.off("click");
 	};
