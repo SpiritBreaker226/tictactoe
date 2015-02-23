@@ -16,11 +16,11 @@ Game.prototype.gameLoop = function(currentSelectedELement) {
 
 	// checks if the turn is at or after 6 rounds 
 	// since before this it is more likly that either player would won
-	if (this.hasWon() && this.turn >= 6) {
+	if (this.turn >= 6 && this.hasWon()) {
 		alert(this.currentTurn + " Has Won");
 
 		$(".coloum").off("click");
-	} else{
+	} else {
 		currentSelectedELement.off("click");
 	};
 }
