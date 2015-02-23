@@ -34,7 +34,7 @@ Game.prototype.hasWon = function() {
 			[2, 5, 8],
 			[3, 6, 9],
 			[1, 5, 9],
-			[4, 5, 7]
+			[3, 5, 7]
 		];
 		
 		for (var i = 0; i < possibleWins.length; i++) {
