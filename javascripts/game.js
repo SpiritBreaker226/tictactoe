@@ -4,9 +4,9 @@ var Game = function() {
 
 Game.prototype.gameLoop = function(currentSelectedELement) {
 	if((this.turn % 2) == 1) {
-		currentSelectedELement.addClass("x");
+		currentSelectedELement.text("x");
 	} else {
-		currentSelectedELement.addClass("o");
+		currentSelectedELement.text("o");
 	};
 	
 	this.turn++;
