@@ -12,6 +12,22 @@
 	text-transform: uppercase;
 }
 
+.top-coloum {
+	border-top: 0;
+}
+
+.right-coloum {
+	border-right: 0;
+}
+
+.left-coloum {
+	border-left: 0;
+}
+
+.bottom-coloum {
+	border-bottom: 0;
+}
+
 .row {
 	clear: both;
 }
