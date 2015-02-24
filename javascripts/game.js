@@ -4,23 +4,29 @@ var Game = function() {
 }
 
 Game.prototype.gameLoop = function(currentSelectedELement) {
-	if((this.turn % 2) == 1) {
-		this.currentTurn = "X";
+	var self = this;
+
+	if((self.turn % 2) == 1) {
+		self.currentTurn = "X";
 	} else {
-		this.currentTurn = "O";
+		self.currentTurn = "O";
 	};
 
-	currentSelectedELement.text(this.currentTurn);
-	$("#currentTurnDisplay").text(this.currentTurn);
-	this.turn++;
+	currentSelectedELement.text(self.currentTurn);
+
+	$("#currentTurnDisplay").text(self.currentTurn);
+	self.turn++;
 
 	// checks if the turn is at or after 6 rounds 
 	// since before this it is more likly that either player would won
-	if (this.turn >= 6 && this.hasWon()) {
-		alert(this.currentTurn + " Has Won");
-
-		$(".coloum").off("click");
-	} else if(this.turn === 10) {
+	if (self.turn >= 6 && self.hasWon()) {
+		$(".gameboard").fadeOut({
+			duration: 1000,
+			complete: function(argument) {
+				alert(self.currentTurn + " Has Won");
+			}
+		});
+	} else if(self.turn === 10) {
 		alert("Game is a Draw");
 	} else {
 		currentSelectedELement.off("click");
