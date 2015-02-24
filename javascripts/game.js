@@ -11,7 +11,7 @@ Game.prototype.gameLoop = function(currentSelectedELement) {
 	};
 
 	currentSelectedELement.text(this.currentTurn);
-
+	$("#currentTurnDisplay").text(this.currentTurn);
 	this.turn++;
 
 	// checks if the turn is at or after 6 rounds 
